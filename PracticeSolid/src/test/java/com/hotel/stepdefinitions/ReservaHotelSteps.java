@@ -31,6 +31,12 @@ public class ReservaHotelSteps {
         theActorCalled("user");
     }
 
+    @After
+    public void TearDown(){
+        closeDriver();
+        System.out.printLn("cerrar tarea");
+    }
+
     @Given("se accede a la pagina para reservar hotel")
     public void seAccedeALaPaginaParaReservarHotel() {
         theActorInTheSpotlight().attemptsTo(OpenPage.travels());
